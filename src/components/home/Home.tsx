@@ -6,7 +6,7 @@ import WidgetSm from "@/components/home/WidgetSm";
 import WidgetLg from "@/components/home/WidgetLg";
 import { getChartsData, getUsersData,getProductsData } from "../../app/utility/data";
 import { TotalTransaction, TotalUser,TotalSales } from "../../app/utility/help";
-import Snavbar from "../Snavbar";
+
 import Card from "./Card";
 
 const Home = async () => {

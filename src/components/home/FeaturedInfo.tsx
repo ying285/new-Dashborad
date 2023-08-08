@@ -12,9 +12,7 @@ interface Props{
 
 const FeaturedInfo:React.FC<Props> = ({title, mainNumber, subNumber,icon}) => {
   return (
-   // <Card variant="outlined"
-    //  sx={{ height: 200, width:300}} 
-    // >
+  
     <Card height=''>
         <div className='flex-1 px-12 py-5 cursor-pointer rounded-md '>
             <span className='text-[18px] '>{title}</span>

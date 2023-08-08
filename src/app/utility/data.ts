@@ -1,6 +1,6 @@
 
 export async function getChartsData(){
-    const res= await fetch('http://localhost:3000//api/charts', {
+    const res= await fetch('http://localhost:3000/api/charts', {
         cache:'no-store'
     });
     return res.json()

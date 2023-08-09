@@ -24,7 +24,7 @@ const NewProducts = () => {
   const handleProductSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch(`/api/products`, {
+      const res = await fetch(`http://localhost:3000/api/products`, {
         method: "POST",
 
         headers: {

@@ -26,7 +26,7 @@ const NewUser = () => {
   const handleUserSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/users", {
+      const res = await fetch("http://localhost:3000/api/users", {
         method: "POST",
 
         headers: {

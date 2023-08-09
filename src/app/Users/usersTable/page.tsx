@@ -62,7 +62,7 @@ const UserItem: React.FC<Props> = ({ data }) => {
                 try {
                   const confirmed = confirm("Are you sure?");
                   if (confirmed) {
-                    const res = await fetch(process.env.URL +`/api/users?id=${params.row._id}`, {
+                    const res = await fetch(`http://localhost:3000/api/users?id=${params.row._id}`, {
                       method: "DELETE",
                       headers: {
                         "Content-Type": "application/json",

@@ -59,7 +59,7 @@ const ProductsTable: React.FC<Props> = ({ data }) => {
                   const confirmed = confirm("Are you sure?");
                   if (confirmed) {
                     const res = await fetch(
-                      `/api/products?id=${params.row._id}`,
+                      process.env.URL +`/api/products?id=${params.row._id}`,
                       {
                         method: "DELETE",
                         headers: {

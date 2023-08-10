@@ -26,7 +26,7 @@ const NewUser = () => {
   const handleUserSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/api/users", {
+      const res = await fetch("new-dashborad.vercel.app/api/users", {
         method: "POST",
 
         headers: {

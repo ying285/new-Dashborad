@@ -59,7 +59,7 @@ const ProductsTable: React.FC<Props> = ({ data }) => {
                   const confirmed = confirm("Are you sure?");
                   if (confirmed) {
                     const res = await fetch(
-                      `http://[::1]:3000/api/products?id=${params.row._id}`,
+                      `new-dashborad.vercel.app/api/products?id=${params.row._id}`,
                       {
                         method: "DELETE",
                         headers: {

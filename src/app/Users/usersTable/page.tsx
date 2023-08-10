@@ -62,7 +62,7 @@ const UserItem: React.FC<Props> = ({ data }) => {
                 try {
                   const confirmed = confirm("Are you sure?");
                   if (confirmed) {
-                    const res = await fetch(`new-dashborad.vercel.app/api/users?id=${params.row._id}`, {
+                    const res = await fetch(`http://127.0.0.1:8000/api/users?id=${params.row._id}`, {
                       method: "DELETE",
                       headers: {
                         "Content-Type": "application/json",

@@ -50,7 +50,7 @@ const NewProducts = () => {
     }
   };
   return (
-    <div className="p-5 basis-4/5  ">
+    <div className="p-5   ">
       <h1>New Product</h1>
       <form className="flex flex-wrap " onSubmit={handleProductSubmit}>
         <div className="w-[400px] mr-3">

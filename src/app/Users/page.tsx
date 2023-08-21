@@ -8,7 +8,7 @@ const UserList = async () => {
 
   return (
     <div
-     className='basis-4/5'>
+     className='px-4'>
       <UserItem data={data?.users} />
     </div>
   );

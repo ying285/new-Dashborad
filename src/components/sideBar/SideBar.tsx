@@ -1,7 +1,6 @@
 import React from "react";
 import DashItem from "./DashItem";
 import LineStyleIcon from "@mui/icons-material/LineStyle";
-import TimelineIcon from "@mui/icons-material/Timeline";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import PersonAddAltIcon from "@mui/icons-material/PersonAddAlt";
 import WarehouseIcon from "@mui/icons-material/Warehouse";
@@ -9,37 +8,34 @@ import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 
 const SideBar = () => {
   return (
-    <div className="basis-1/5 bg-slate-100 h-[calc(100vh-50px)]  text-gray-500 sticky top-[50px] hidden md:block">
-      <div className="p-10 ">
+    <div
+      className=" bg-slate-100 min-h-[100vh] text-gray-500 hidden sm:block  md:w-[75px] xl:min-w-[250px]"
+    >
+      <div className="p-3 md:p-4 xl:p-10 ">
         <DashItem
-          title="Dashborad"
-          item1="Home"
-          item2="Analytics"
-          item3=""
-          icon1={<LineStyleIcon />}
-          icon2={<TimelineIcon />}
-          icon3=""
+          item="Home"
+          icon={<LineStyleIcon />}
           active="bg-gray-300 "
         />
-        <DashItem
-          title="User Menu"
-          item1="Users"
-          item2="Create User"
-          item3=""
-          icon1={<PersonOutlineIcon />}
-          icon2={<PersonAddAltIcon />}
-          icon3=""
-          active=""
+         <DashItem
+          item="Users"
+          icon={<PersonOutlineIcon />}
+          active=''
+        />
+         <DashItem
+          item="Create User"
+          icon={<PersonAddAltIcon />}
+          active=''
+        />
+         <DashItem
+          item="Products"
+          icon={<WarehouseIcon />}
+          active=''
         />
         <DashItem
-          title="Product Menu"
-          item1="Products"
-          item2="Create Product"
-          item3=""
-          icon1={<WarehouseIcon />}
-          icon2={<AddBusinessIcon />}
-          icon3=""
-          active=""
+          item="Create Product"
+          icon={<AddBusinessIcon />}
+          active=''
         />
       </div>
     </div>

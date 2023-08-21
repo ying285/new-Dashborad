@@ -78,46 +78,12 @@ export function TotalUser(data: ChartsData[]) {
   return users;
 }
 
-export function ccyFormat(num: number) {
-  return `${num.toFixed(2)}`;
-}
-
-function priceRow(qty: number, unit: number) {
-  return qty * unit;
-}
-
-export function createRow(desc: string, qty: number, unit: number) {
-  const price = priceRow(qty, unit);
-  return { desc, qty, price, unit };
-}
-
-interface Row {
-  desc: string;
-  qty: number;
-  price: number;
-}
-
-export function subtotal(items: readonly Row[]) {
-  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
-}
 
 
-interface userData{
-  name:string,
-  ActiveUser:string
-}
-export function userChartData(data: userData[]) {
-  const newArray: string[] = [];
 
-  data.forEach((el:any) => {
-    if (
-      el.name === "Mar" ||
-      el.name === "Jun" ||
-      el.name === "Sep" ||
-      el.name === "Dec"
-    )
-      newArray.push(el);
-  });
 
-  return newArray;
-}
+
+
+
+
+

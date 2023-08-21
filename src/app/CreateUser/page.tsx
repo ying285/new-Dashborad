@@ -142,7 +142,7 @@ const NewUser = () => {
           />
         </div>
 
-        <div className="w-[400px] mt-7 ">
+        <div className="w-[400px] ml-0 mt-7 xxxl:mt-14 xxxl:ml-3 ">
           <button className="rounded-[5px] bg-[darkblue] px-2 w-[12rem] py-1.5 text-[#fff] text-[13px] cursor-pointer">
             Create
           </button>

@@ -15,12 +15,13 @@ const TopbarDetail:React.FC<Props> = ({username, avatar}) => {
 
   return (
     <>
-     <nav className="className=' h-[50px] flex items-center justify-between w-[95%] mx-auto  px-5  shadow-gray-100 min-w-[520px] ">
-        <div >
+     <nav className="className=' h-[50px] flex items-center justify-between 
+      mx-auto    shadow-gray-100 ">
+        <div className='w-[20px]'>
           <span className="text-xl font-bold text-cyan-700 ">Dashborad</span>
         </div> 
 
-        <div className={`absolute  w-full min-w-[448px] z-50 bg-gray-400 text-white left-0  ${showMenu?'top-[99%]':'top-[-5000%]'} flex items-center px-5 md:hidden`}>
+        <div className={`absolute  w-[150%] z-50 bg-gray-400 text-white left-0  ${showMenu?'top-[5.5%]':'top-[-5000%]'} flex items-center px-5 sm:hidden xs:w-full`}>
           <ul className=" flex  items-center gap-[4vw] gap-8 lg:flex-row flex-col py-[5%]">
             <li><Link href='/'>Home</Link></li>
             <li><Link href='/Analytics'>Analytics</Link></li>
@@ -32,7 +33,7 @@ const TopbarDetail:React.FC<Props> = ({username, avatar}) => {
           </ul>
           </div>
           <div className=" flex items-center ">
-              <span className="mr-3 text-[14px] hidden md:block">
+              <span className="mr-3 text-[14px] hidden sm:block">
                 {username}
               </span>
               <Image
@@ -40,11 +41,11 @@ const TopbarDetail:React.FC<Props> = ({username, avatar}) => {
                 width="20"
                 height="20"
                 alt="img"
-                className="rounded-[50px] object-cover hidden md:block"
+                className="rounded-[50px] w-[20px] object-cover hidden sm:block"
                 style={{ width: "30px", height: "30px" }}
               />
             </div>
-            <MenuIcon className='md:hidden' onClick={()=>setShowMenu(prevShow=>!prevShow)} />
+            <MenuIcon className=' w-[20px] sm:hidden' onClick={()=>setShowMenu(prevShow=>!prevShow)} />
         
       </nav>
     </>

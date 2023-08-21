@@ -9,10 +9,9 @@ interface Props {
 
 const ProductsList: React.FC<Props> = async ({ params }) => {
   const _id = params.productsList;
-  console.log(_id)
-  console.log('ying')
+  
   return (
-    <div className="p-5 basis-4/5">
+    <div className="p-5">
       <div className="flex items-center justify-between">
         <h1 className="text-[20px] font-bold">Product</h1>
         <Link href={"/CreateProduct"}>

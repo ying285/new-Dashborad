@@ -1,4 +1,4 @@
-//'use client'
+
 
 import React from "react";
 import TopbarDetail from "./TopbarDetail";
@@ -11,7 +11,7 @@ const Topbar = async () => {
   
 
   return (
-    <div className='sticky top-0 bg-[#fff]'>
+    <div className='bg-[#fff] px-4'>
      <TopbarDetail username={userData.users[0].username} avatar={userData.users[0].avatar}/>
     
     </div>

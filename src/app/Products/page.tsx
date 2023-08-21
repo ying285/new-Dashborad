@@ -9,7 +9,7 @@ const Products = async() => {
   
 
   return (
-    <div className='basis-4/5'  >
+    <div className='px-4'  >
         <ProductsTable data={productsData?.products}/>
         </div>
   )

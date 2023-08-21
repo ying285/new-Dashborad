@@ -5,6 +5,7 @@ import Image from "next/image";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Topbar from "@/components/Topbar";
 
 interface Props {
   data: string[];
@@ -85,6 +86,8 @@ const UserItem: React.FC<Props> = ({ data }) => {
 
   return (
     <>
+    
+    <div>
       <DataGrid
         rows={data}
         columns={columns}
@@ -96,6 +99,7 @@ const UserItem: React.FC<Props> = ({ data }) => {
         pageSizeOptions={[5]}
         checkboxSelection
       />
+      </div>
     </>
   );
 };

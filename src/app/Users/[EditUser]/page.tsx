@@ -11,7 +11,7 @@ const usersItem: React.FC<Props> = async ({ params }) => {
   const _id = params.EditUser;
 
   return (
-    <div className="p-5   basis-4/5">
+    <div className="p-5  ">
       <div className="flex items-center justify-between">
         <h1 className="text-[20px] font-bold">Edit User</h1>
         <Link href={"/CreateUser"}>

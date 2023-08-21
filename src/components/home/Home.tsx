@@ -6,6 +6,7 @@ import WidgetSm from "@/components/home/WidgetSm";
 import WidgetLg from "@/components/home/WidgetLg";
 import { getChartsData, getUsersData,getProductsData } from "../../app/utility/data";
 import { TotalTransaction, TotalUser,TotalSales } from "../../app/utility/help";
+import Topbar from "../Topbar";
 
 import Card from "./Card";
 
@@ -20,10 +21,12 @@ const Home = async () => {
   
 
   return (
-    <div className="basis-4/5 ">
+    <div className=" px-4 grid gap-y-2 lg:gap-y-4">
       
-      <div className=" block w-100 md:flex w-100 justify-around">
-        <div className='px-4 w-50'>
+      
+      <div className="grid grid-cols-1 gap-x-2  lg:gap-x-4 sm:grid-cols-3">
+       
+        <div className=' '>
           <FeaturedInfo
          
           title="Transaction"
@@ -33,7 +36,7 @@ const Home = async () => {
         />
         </div>
         
-        <div className='mt-5 px-4 md:mt-0'>
+        <div className=' mt-2 sm:mt-0 '>
           <FeaturedInfo
           title="Sales"
           mainNumber={sales}
@@ -42,7 +45,7 @@ const Home = async () => {
         />
         </div>
         
-      <div className='mt-5 px-4 md:mt-0'>
+      <div className='mt-2 sm:mt-0'>
          <FeaturedInfo
           title='Users'
           mainNumber={users}
@@ -52,7 +55,7 @@ const Home = async () => {
       </div>
        
       </div>
-      <div className="mt-5 px-4 md:px-4">
+      <div className="grid grid-cols-1">
         <Card height=''>
           <Charts
           title="User Analytics"
@@ -64,11 +67,11 @@ const Home = async () => {
         
       </div>
 
-      <div className="block md:flex  mt-5 px-4 mb-5">
-        <div className="w-100 mr-8 mb-5 flex-1 w-full md:basis-2/5 ">
+      <div className="grid mb-4 md:grid-cols-[40%_58.95%] md:gap-x-2 lg:gap-x-4 lg:grid-cols-[40%_58.3%]">
+        <div className=" ">
           <WidgetSm />
         </div>
-       <div className='w-100  flex-1  md:basis-3/5'>
+       <div className='mt-2 md:mt-0'>
         <WidgetLg />
        </div>
         

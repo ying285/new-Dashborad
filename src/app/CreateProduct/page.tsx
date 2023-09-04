@@ -43,6 +43,7 @@ const NewProducts = () => {
       if (res.status === 201) {
         alert("The product has been created!");
         router.push('/Products')
+        router.refresh();
       }
     } catch (err) {
       console.log(err);

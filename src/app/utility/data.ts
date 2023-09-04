@@ -19,6 +19,11 @@ export async function getUserById(id:string){
     return res.json()
 }
 
+export async function getProductById(id:string){
+    const res= await fetch(`http://localhost:3000/api/products/${id}`,{cache:"no-store"});
+    return res.json()
+}
+
 
 
 

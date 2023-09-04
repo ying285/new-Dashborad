@@ -47,6 +47,7 @@ const NewUser = () => {
       if (res.status === 201) {
         alert("The user has been added!");
         router.push('/Users')
+        router.refresh();
       }
     } catch (err) {
       console.log(err);

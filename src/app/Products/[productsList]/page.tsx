@@ -21,7 +21,7 @@ const ProductsList: React.FC<Props> = async ({ params }) => {
         </Link>
       </div>
       <div className="flex mt-5">
-        <ProductItemRight />
+        <ProductItemRight id={_id}/>
         <ProductItemButtom id={_id} />
       </div>
     </div>

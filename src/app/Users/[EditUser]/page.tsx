@@ -21,7 +21,7 @@ const usersItem: React.FC<Props> = async ({ params }) => {
         </Link>
       </div>
       <div className="flex mt-5">
-        <UserItemLeft />
+        <UserItemLeft id={_id}/>
         <UserItemRight id={_id} />
       </div>
     </div>

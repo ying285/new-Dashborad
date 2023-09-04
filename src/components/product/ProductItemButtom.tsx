@@ -28,7 +28,7 @@ const ProductItemButtom: React.FC<Props> = ({id}) => {
   const handleProductSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch(`http://localhost:3000/api/products/${id}`, {
+      const res = await fetch(`/api/products/${id}`, {
         method: "PUT",
 
         headers: {
@@ -46,6 +46,7 @@ const ProductItemButtom: React.FC<Props> = ({id}) => {
       if (res.status === 200) {
         alert("The product has been updated!");
         router.push('/Products')
+        router.refresh();
       }
     } catch (err) {
       console.log(err);

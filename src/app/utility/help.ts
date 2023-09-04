@@ -19,10 +19,7 @@ tel:string
 
 
 export function TotalTransaction(data: TranData[]) {
-  const transaction = data
-    .map(({ transaction, ...rest }) => transaction)
-    .toString()
-    .replaceAll("$", "")
+  const transaction = data?.map(({ transaction, ...rest }) => transaction).toString().replaceAll("$", "")
     .split(",")
     .map((item: any) => parseInt(item))
     .reduce((prev, cur) => prev + cur, 0);

@@ -51,6 +51,7 @@ const UserItemRight: React.FC<Props> = ({ id }) => {
       if (res.status === 200) {
         alert("The item has been updated!");
         router.push('/Users')
+        router.refresh();
       }
     } catch (err) {
       console.log(err);

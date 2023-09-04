@@ -2,6 +2,19 @@ import { NextResponse } from "next/server";
 import connect from "../../../../backend/db/db";
 import Users from "../../../../backend/models/Users";
 
+export const GET =async(request, { params })=>{
+  const { id } = params;
+  try{
+    await connect();
+    const user=await Users.findById(id)
+    return NextResponse.json({ user }, { status: 200 });
+  }catch(error){
+    console.log(error);
+    return new NextResponse("Database Error", { status: 500 });
+  }
+
+}
+
 export const PUT = async (request, { params }) => {
   const { id } = params;
 

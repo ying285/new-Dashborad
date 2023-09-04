@@ -6,17 +6,19 @@ import WidgetSm from "@/components/home/WidgetSm";
 import WidgetLg from "@/components/home/WidgetLg";
 import { getChartsData, getUsersData,getProductsData } from "../../app/utility/data";
 import { TotalTransaction, TotalUser,TotalSales } from "../../app/utility/help";
-import Topbar from "../Topbar";
-
 import Card from "./Card";
 
-const Home = async () => {
+
+
+
+const Home = async() => {
+
   const data = await getChartsData();
   const userData = await getUsersData();
   const productData = await getProductsData();
   const trans = TotalTransaction(userData?.users);
-  const users=TotalUser(data.charts)
-  const sales=TotalSales(productData.products)
+  const users=TotalUser(data?.charts)
+  const sales=TotalSales(productData?.products)
   
   
 

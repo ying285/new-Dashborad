@@ -5,13 +5,15 @@ import Image from "next/image";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Topbar from "@/components/Topbar";
+
 
 interface Props {
   data: string[];
 }
 
 const UserItem: React.FC<Props> = ({ data }) => {
+
+  console.log(data)
   const router = useRouter();
 
   const columns: GridColDef[] = [
@@ -63,7 +65,7 @@ const UserItem: React.FC<Props> = ({ data }) => {
                 try {
                   const confirmed = confirm("Are you sure?");
                   if (confirmed) {
-                    const res = await fetch(process.env.URL+`/api/users?id=${params.row._id}`, {
+                    const res = await fetch(`/api/users?id=${params.row._id}`, {
                       method: "DELETE",
                       headers: {
                         "Content-Type": "application/json",

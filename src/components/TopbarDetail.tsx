@@ -24,7 +24,6 @@ const TopbarDetail:React.FC<Props> = ({username, avatar}) => {
         <div className={`absolute  w-[150%] z-50 bg-gray-400 text-white left-0  ${showMenu?'top-[5.5%]':'top-[-5000%]'} flex items-center px-5 sm:hidden xs:w-full`}>
           <ul className=" flex  items-center gap-[4vw] gap-8 lg:flex-row flex-col py-[5%]">
             <li><Link href='/'>Home</Link></li>
-            <li><Link href='/Analytics'>Analytics</Link></li>
             <li><Link href='/Users'>Users</Link></li>
             <li><Link href='/CreateUser'>Create User</Link></li>
             <li><Link href='/Produts'>Products</Link></li>

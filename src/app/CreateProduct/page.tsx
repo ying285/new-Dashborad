@@ -24,7 +24,7 @@ const NewProducts = () => {
   const handleProductSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const res = await fetch(`new-dashborad.vercel.app/api/products`, {
+      const res = await fetch(`/api/products`, {
         method: "POST",
 
         headers: {
